@@ -20,12 +20,12 @@ const Post = ({ post }) => {
     return (<>
         <h2>{post.title}</h2>
         
-        <p className="content">The post's content is: {post.content}</p>
+        <p className="content">{post.content}</p>
         
         {/* {post.attachments == null ? <>no attachment</> :
             <p className="attachments">The post's attachments are: {post.attachments}</p>} */}
 
-        <p className="timestamp">timestamp: {format_time(post.timestamp)}</p>
+        <p className="timestamp">{format_time(post.timestamp)}</p>
     </>);
 
 }
