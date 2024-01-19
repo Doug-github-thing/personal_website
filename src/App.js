@@ -11,7 +11,7 @@ function App() {
                 <Header />
             </header>
 
-            <div class="container">
+            <div className="container">
                 <PostBody/>
                 <EmbeddedPlayer />
             </div>

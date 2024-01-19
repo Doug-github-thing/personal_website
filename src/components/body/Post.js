@@ -10,11 +10,22 @@
  */
 const Post = ({ post }) => {
 
+    // The firestore timestamp is passed as a number of seconds in UTC epoch
+    // This converts to a human readable east coast time
+    const format_time = (timestamp) => {
+        const date = timestamp.toDate();
+        return `${date.toDateString()} ${date.toLocaleTimeString()}`;
+    }
+
     return (<>
         <h2>{post.title}</h2>
-        <p class="content">The post's content is: {post.content}</p>
-        <p>The post's attachments are: {post.attachments}</p>
-        <p>timestamp: {post.timestamp}</p>
+        
+        <p className="content">The post's content is: {post.content}</p>
+        
+        {/* {post.attachments == null ? <>no attachment</> :
+            <p className="attachments">The post's attachments are: {post.attachments}</p>} */}
+
+        <p className="timestamp">timestamp: {format_time(post.timestamp)}</p>
     </>);
 
 }

@@ -32,7 +32,7 @@ h1 {
     margin-top: 20px;
 }
 
-.button, button {
+.button {
     display: inline-block;
     background-color: #444;
     color: #0ACDFF;
@@ -42,7 +42,12 @@ h1 {
     cursor: pointer;
 }
 
-.button:hover button:hover{
+.button:hover {
     background-color: #0ACDFF;
     color: #222;
+}
+
+.timestamp {
+    font-size: small;
+    /* background-color: red; */
 }
