@@ -19,15 +19,17 @@ const Post = ({ post }) => {
     }
 
     return (<>
-        <h2 className="title">{post.title}</h2>
+        <h2 id="title">{post.title}</h2>
         
-        <p className="content">{post.content}</p>
+        <p id="content">{post.content}</p>
         
         {/* If there is an attachment0, display it */}
-        {post.attachment0 == null ? <></> :
-            <img className="attachment" src={post.attachment0} />}
+        {post.attachment0 == null ? <></> : <>
+            <img className="attachment" src={post.attachment0} />
+            <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
+        </>}
 
-        <p className="timestamp">{format_time(post.timestamp)}</p>
+        <p id="timestamp">{format_time(post.timestamp)}</p>
     </>);
 
 }

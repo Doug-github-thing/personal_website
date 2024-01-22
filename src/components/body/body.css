@@ -1,11 +1,18 @@
 .post-body {
     padding: 2%;
     padding-top: 1%;
-    /* background-color: red; */
 }
 
-.timestamp {
-    /* background-color: aliceblue; */
+.post-body #title {
+    text-align: center;
+}
+
+.post-body .attachment-caption {
+    margin-top: 0;
+    font-size: small;
+}
+
+.post-body #timestamp {
     font-style: italic;
     font-size: small;
 }
