@@ -15,7 +15,7 @@ const Navbar = ({ posts, setSelected }) => {
         {/* List of post titles */}
         {
             posts?.map((this_post, index) => (
-                <div className="post-title" onClick={ () => setSelected(this_post.postId) }>
+                <div className="post-title" key={index} onClick={ () => setSelected(this_post.postId) }>
                     {this_post.title}</div>
             ))
         }

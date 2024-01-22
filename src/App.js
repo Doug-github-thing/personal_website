@@ -31,7 +31,6 @@ function App() {
                 const newData = querySnapshot.docs
                     .map((doc) => ({...doc.data(), id:doc.id }));
                 setPosts(newData);                
-                console.log(posts, newData);
             })
     }
     

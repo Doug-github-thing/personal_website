@@ -16,8 +16,12 @@ const PostBody = ({ posts, selected }) => {
             posts?.map((this_post, index) => (
                 // If this post is the one that is selected, display it on screen.
                 this_post.postId === selected ? 
-                    <Post key={index} post={this_post}/>
-                : <></>
+                    <div key={index}>
+                        <Post post={this_post}/>
+                    </div>
+                :
+                // blank div when the "selected" post is not the current
+                <div key={index}></div>
             ))
         }
     </>);
