@@ -6,14 +6,18 @@ import SiteLinkButtons from "./SiteLinkButtons";
  * clickable by the user, which transfer state to the main body component to render
  * the appropriate page.
  */
-const Navbar = () => {
+const Navbar = ({posts}) => {
     return (<>
 
-        <h3>This is the navbar</h3>
-        <p>Navbar item 1</p>
-        <p>Navbar item 2</p>
-        <p>Navbar item 3</p>
-        <p>Navbar item 4</p>
+        <h1>Posts</h1>
+
+        {/* List of post titles */}
+        {
+            posts?.map((this_post, index) => (
+                <p>{this_post.title}</p>
+            ))
+        }
+
         <h1>Links</h1>
         <SiteLinkButtons />
 
