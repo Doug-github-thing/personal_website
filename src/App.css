@@ -31,16 +31,10 @@
     width: 85vw;  /* use vw here because there is no parent to define horizontal constraint */
     height: 100%; /* use % here because the zone-container parent defines a vertical constraint */
 }
-.navbar {
-}
 .body {
     width: 50%;
     position: relative;
 }
-
-/* .navbar {
-    height: 100%;
-} */
 
 h1 {
     color: #0ACDFF;
@@ -49,10 +43,6 @@ h1 {
 
 h3 {
     color: #0ACDFF;
-}
-
-.navbar p {
-    margin: 5%;
 }
 
 .button-container {
