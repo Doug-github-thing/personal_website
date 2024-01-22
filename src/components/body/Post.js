@@ -23,8 +23,9 @@ const Post = ({ post }) => {
         
         <p className="content">{post.content}</p>
         
-        {/* {post.attachments == null ? <>no attachment</> :
-            <p className="attachments">The post's attachments are: {post.attachments}</p>} */}
+        {/* If there is an attachment0, display it */}
+        {post.attachment0 == null ? <></> :
+            <img className="attachment" src={post.attachment0} />}
 
         <p className="timestamp">{format_time(post.timestamp)}</p>
     </>);

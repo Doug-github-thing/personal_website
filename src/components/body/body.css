@@ -5,5 +5,7 @@
 }
 
 .timestamp {
-    font-weight: 10;
+    /* background-color: aliceblue; */
+    font-style: italic;
+    font-size: small;
 }
