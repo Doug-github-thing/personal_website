@@ -50,7 +50,7 @@ const Post = ({ post }) => {
                 
                     {/* If there is an attachment0, display it */}
                     {post.attachment0 == null ? <></> : <>
-                        <img className="attachment" src={post.attachment0} />
+                        <img className="attachment" src={post.attachment0} alt="image1" />
                         <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
                     </>}
 

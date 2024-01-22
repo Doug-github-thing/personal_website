@@ -13,7 +13,7 @@ const EditPostForm = ({ post, cancelEditingStatus }) => {
     // Called when the form submit is clicked
     const submit = async () => {
 
-        if ( post.content == content && post.title == title) {
+        if ( post.content === content && post.title === title) {
             console.log("no changes made");
             cancelEditingStatus();
             return;
