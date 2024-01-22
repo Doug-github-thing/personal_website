@@ -1,13 +1,3 @@
-.header {
-    background-color: #222;
-    position: absolute;
-    top: 0%;
-    height: 12%;
-    width: 100%;
-    text-align: center;
-    margin: 0;
-}
-
 .zone-container {
     position: absolute;
     top: 12vh;
@@ -34,11 +24,6 @@
 .body {
     width: 50%;
     position: relative;
-}
-
-.header h1 {
-    color: #0ACDFF;
-    margin: 0;
 }
 
 .button {
