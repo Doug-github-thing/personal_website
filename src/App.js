@@ -15,7 +15,7 @@ function App() {
     // Stores all currently available posts
     const [posts, setPosts] = useState(null);
     // Tracks which page is currently selected to be active in the body
-    const [selected, setSelected] = useState("");
+    const [selected, setSelected] = useState("0");
 
 
     // Gets all posts on app load
