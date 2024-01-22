@@ -1,4 +1,5 @@
 import Post from "./Post";
+import "./body.css";
 
 /**
  * Searches through the raw data arrays for any post that has the same ID as the currently selected ID.
@@ -10,7 +11,7 @@ import Post from "./Post";
 const PostBody = ({ posts, selected }) => {
 
     return (
-    <>
+    <div className="post-body">
         {
             posts?.map((this_post, index) => (
                 // If this post is the one that is selected, display it on screen.
@@ -19,7 +20,7 @@ const PostBody = ({ posts, selected }) => {
                 : <></>
             ))
         }
-    </>);
+    </div>);
 }
 
 export default PostBody;

@@ -10,16 +10,17 @@ const Navbar = ({ posts, setSelected }) => {
     return (
     <>
 
-        <h1>Posts</h1>
+        <h1 className="posts-header">My Projects</h1>
 
         {/* List of post titles */}
         {
             posts?.map((this_post, index) => (
-                <p onClick={ () => setSelected(this_post.postId) }>{this_post.title}</p>
+                <div className="post-title" onClick={ () => setSelected(this_post.postId) }>
+                    {this_post.title}</div>
             ))
         }
 
-        <h1>Links</h1>
+        <h1 className="links-header">Links</h1>
         <SiteLinkButtons />
 
     </>);
