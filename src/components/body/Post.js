@@ -1,3 +1,5 @@
+import EditPostForm from "./EditPostForm";
+
 import { useState } from "react";
 import { ReactComponent as EditIcon } from "../../edit-icon.svg";
 
@@ -35,22 +37,29 @@ const Post = ({ post }) => {
 
     return (<>
 
-        is editing? {isEditing ? <>true</> : <>false</>}
-
         <div id="title-wrapper">
             <h2 id="title">{post.title} </h2>
             <div id="edit-icon" onClick={() => editCallback()}><EditIcon width="20px" height="20px" /></div>
         </div>
         
-        <p id="content">{post.content}</p>
-        
-        {/* If there is an attachment0, display it */}
-        {post.attachment0 == null ? <></> : <>
-            <img className="attachment" src={post.attachment0} />
-            <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
-        </>}
 
-        <p id="timestamp">{formatTime(post.timestamp)}</p>
+        {/* Display edit form while in "editing" state */}
+        {!isEditing ?
+                <>
+                    <p id="content">{post.content}</p>
+                
+                    {/* If there is an attachment0, display it */}
+                    {post.attachment0 == null ? <></> : <>
+                        <img className="attachment" src={post.attachment0} />
+                        <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
+                    </>}
+
+                    <p id="timestamp">{formatTime(post.timestamp)}</p>
+                </> 
+            :
+            <EditPostForm post={post} cancelEditingStatus={() => setIsEditing(false)}/>
+        }
+                
     </>);
 
 }
