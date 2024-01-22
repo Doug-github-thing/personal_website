@@ -36,18 +36,9 @@
     position: relative;
 }
 
-h1 {
+.header h1 {
     color: #0ACDFF;
     margin: 0;
-}
-
-h3 {
-    color: #0ACDFF;
-}
-
-.button-container {
-    text-align: center;
-    margin-top: 20px;
 }
 
 .button {

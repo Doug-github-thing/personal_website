@@ -1,7 +1,6 @@
 import "./App.css";
 import Header from "./components/header/Header";
 import Navbar from "./components/navbar/Navbar";
-import EmbeddedPlayer from "./components/body/EmbeddedPlayer";
 import PostBody from "./components/body/PostBody";
 
 function App() {
@@ -24,10 +23,10 @@ function App() {
 
                 <div className="right-zone">
                     <div className="body">
+                    
+                        <PostBody />
+                    
                     </div>
-
-                    <PostBody/>
-                    <EmbeddedPlayer />
                 </div>
 
             </div>
