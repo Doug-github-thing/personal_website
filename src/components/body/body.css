@@ -3,8 +3,17 @@
     padding-top: 1%;
 }
 
-.post-body #title {
+.post-body #title-wrapper {
     text-align: center;
+}
+
+.post-body #title {
+    font-weight: bold;
+    display: inline;
+}
+
+.post-body #edit-icon {
+    display: inline;
 }
 
 .post-body .attachment-caption {

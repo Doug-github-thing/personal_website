@@ -1,3 +1,6 @@
+import { useState } from "react";
+import { ReactComponent as EditIcon } from "../../edit-icon.svg";
+
 /**
  * Takes all data from a post object from the firestore database, and displays it.
  * Expects an object of the form:
@@ -11,15 +14,33 @@
  */
 const Post = ({ post }) => {
 
+    // For tracking if the current post is currently being edited.
+    const [isEditing, setIsEditing] = useState(false);
+
+
+    // Toggle edit mode when the edit button is clicked
+    const editCallback = () => {
+        const editingValue = isEditing ? false : true;
+        setIsEditing(editingValue);
+    }
+
+
     // The firestore timestamp is passed as a number of seconds in UTC epoch
     // This converts to a human readable east coast time
-    const format_time = (timestamp) => {
+    const formatTime = (timestamp) => {
         const date = timestamp.toDate();
         return `${date.toDateString()} ${date.toLocaleTimeString()}`;
     }
 
+
     return (<>
-        <h2 id="title">{post.title}</h2>
+
+        is editing? {isEditing ? <>true</> : <>false</>}
+
+        <div id="title-wrapper">
+            <h2 id="title">{post.title} </h2>
+            <div id="edit-icon" onClick={() => editCallback()}><EditIcon width="20px" height="20px" /></div>
+        </div>
         
         <p id="content">{post.content}</p>
         
@@ -29,7 +50,7 @@ const Post = ({ post }) => {
             <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
         </>}
 
-        <p id="timestamp">{format_time(post.timestamp)}</p>
+        <p id="timestamp">{formatTime(post.timestamp)}</p>
     </>);
 
 }
