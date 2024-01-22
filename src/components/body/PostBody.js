@@ -1,3 +1,4 @@
+import EditPostForm from "./EditPostForm";
 import Post from "./Post";
 import "./body.css";
 
@@ -12,6 +13,12 @@ const PostBody = ({ posts, selected }) => {
 
     return (
     <>
+        {
+            selected === "new" ?
+                <EditPostForm cancelEditingStatus={() => {alert("cancel needs implementation");}} />
+            :
+                <></>
+        }
         {
             posts?.map((this_post, index) => (
                 // If this post is the one that is selected, display it on screen.
