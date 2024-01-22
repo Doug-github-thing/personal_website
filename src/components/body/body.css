@@ -16,6 +16,10 @@
     display: inline;
 }
 
+.post-body #content {
+    white-space: pre;
+}
+
 .post-body .attachment-caption {
     margin-top: 0;
     font-size: small;
