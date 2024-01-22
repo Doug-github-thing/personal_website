@@ -12,12 +12,19 @@ const EditPostForm = ({ post, cancelEditingStatus }) => {
 
     // Called when the form submit is clicked
     const submit = async () => {
-        // Make the change
+
+        if ( post.content == content && post.title == title) {
+            console.log("no changes made");
+            cancelEditingStatus();
+            return;
+        }
+
+        // Build a new Post object to replace the old
         let updatedPost = post;
         updatedPost.title = title;
         updatedPost.content = content;
         updatedPost.timestamp = Timestamp.fromDate(new Date());
-
+        // Make the change
         await setDoc(doc(db, "posts", `post${post.postId}`), updatedPost);
 
         cancelEditingStatus();
