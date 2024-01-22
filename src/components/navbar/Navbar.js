@@ -1,0 +1,21 @@
+import "./navbar.css";
+/**
+ * A component that sits on the left side of the screen and contains links to "pages"
+ * clickable by the user, which transfer state to the main body component to render
+ * the appropriate page.
+ */
+const Navbar = () => {
+    return (<>
+
+        <h3>This is the navbar</h3>
+        <button>navbar button 1</button>
+        <button>navbar button 2</button>
+        <p>Navbar item 1</p>
+        <p>Navbar item 2</p>
+        <p>Navbar item 3</p>
+        <p>Navbar item 4</p>
+
+    </>);
+}
+
+export default Navbar;
