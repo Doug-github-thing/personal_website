@@ -53,7 +53,7 @@ function App() {
                 </div>
 
                 <div className="right-zone">
-                    <div className="body">
+                    <div className="post-body">
                         <PostBody posts={posts} selected={selected} />
                     </div>
                 </div>

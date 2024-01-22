@@ -21,10 +21,6 @@
     width: 85vw;  /* use vw here because there is no parent to define horizontal constraint */
     height: 100%; /* use % here because the zone-container parent defines a vertical constraint */
 }
-.body {
-    width: 50%;
-    position: relative;
-}
 
 .button {
     display: inline-block;
@@ -39,8 +35,4 @@
 .button:hover {
     background-color: #0ACDFF;
     color: #222;
-}
-
-.timestamp {
-    font-size: small;
 }

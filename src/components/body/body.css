@@ -1,3 +1,9 @@
 .post-body {
-    /* background-color: blue; */
+    padding: 2%;
+    padding-top: 1%;
+    /* background-color: red; */
+}
+
+.timestamp {
+    font-weight: 10;
 }

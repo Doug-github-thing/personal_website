@@ -11,7 +11,7 @@ import "./body.css";
 const PostBody = ({ posts, selected }) => {
 
     return (
-    <div className="post-body">
+    <>
         {
             posts?.map((this_post, index) => (
                 // If this post is the one that is selected, display it on screen.
@@ -20,7 +20,7 @@ const PostBody = ({ posts, selected }) => {
                 : <></>
             ))
         }
-    </div>);
+    </>);
 }
 
 export default PostBody;

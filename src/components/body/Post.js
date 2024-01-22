@@ -19,7 +19,7 @@ const Post = ({ post }) => {
     }
 
     return (<>
-        <h2>{post.title}</h2>
+        <h2 className="title">{post.title}</h2>
         
         <p className="content">{post.content}</p>
         
