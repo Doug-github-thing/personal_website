@@ -20,6 +20,9 @@ const Navbar = ({ posts, setSelected }) => {
             ))
         }
 
+        <div className="new-post-button" onClick={ () => setSelected("new") }>
+            Add Project</div>
+
         <h1 className="links-header">Links</h1>
         <SiteLinkButtons />
 

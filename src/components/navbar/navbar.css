@@ -15,7 +15,7 @@
     margin-top: 0;
 }
 
-.navbar .link, .navbar .post-title {
+.navbar .link, .navbar .post-title, .navbar .new-post-button {
     display: inline-block;
     background-color: #333;
     color: #0ACDFF;
@@ -26,7 +26,16 @@
     cursor: pointer;
 }
 
+.navbar .new-post-button { 
+    background-color: #222;
+    font-size: small;
+}
+
 .navbar .link:hover, .navbar .post-title:hover {
     background-color: #0ACDFF;
     color: #222;
+}
+
+.navbar .new-post-button:hover { 
+    background-color: #444;
 }
