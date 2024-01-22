@@ -10,8 +10,6 @@ const Navbar = () => {
     return (<>
 
         <h3>This is the navbar</h3>
-        <button>navbar button 1</button>
-        <button>navbar button 2</button>
         <p>Navbar item 1</p>
         <p>Navbar item 2</p>
         <p>Navbar item 3</p>

@@ -18,7 +18,7 @@
 .left-zone {
     position: absolute;
     left: 0;
-    width: 15vw;  /* use vw here because there is no parent to define horizontal constraint */
+    width: 10vw;  /* use vw here because there is no parent to define horizontal constraint */
     height: 100%; /* use % here because the zone-container parent defines a vertical constraint */
     padding: 0;
     background-color: #222;
@@ -27,7 +27,7 @@
     position: absolute;
     background-color: #333;
     top: 0vh;
-    left: 15vw;
+    left: 10vw;
     width: 85vw;  /* use vw here because there is no parent to define horizontal constraint */
     height: 100%; /* use % here because the zone-container parent defines a vertical constraint */
 }
