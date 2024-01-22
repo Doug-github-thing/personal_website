@@ -6,15 +6,16 @@ import SiteLinkButtons from "./SiteLinkButtons";
  * clickable by the user, which transfer state to the main body component to render
  * the appropriate page.
  */
-const Navbar = ({posts}) => {
-    return (<>
+const Navbar = ({ posts, setSelected }) => {
+    return (
+    <>
 
         <h1>Posts</h1>
 
         {/* List of post titles */}
         {
             posts?.map((this_post, index) => (
-                <p>{this_post.title}</p>
+                <p onClick={ () => setSelected(this_post.postId) }>{this_post.title}</p>
             ))
         }
 

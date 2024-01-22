@@ -1,6 +1,7 @@
 /**
  * Takes all data from a post object from the firestore database, and displays it.
  * Expects an object of the form:
+ * "postId": <string>
  * "title": <string>
  * "content": <string>
  * "timestamp": <timestamp>

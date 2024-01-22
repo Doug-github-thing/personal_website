@@ -14,6 +14,8 @@ function App() {
 
     // Stores all currently available posts
     const [posts, setPosts] = useState(null);
+    // Tracks which page is currently selected to be active in the body
+    const [selected, setSelected] = useState("");
 
 
     // Gets all posts on app load
@@ -39,22 +41,20 @@ function App() {
     return (
         <div className="App">
             <div className="header">
-                <Header />
+                <Header setSelected={setSelected} />
             </div>
 
             <div className="zone-container">
 
                 <div className="left-zone">
                     <div className="navbar">
-                        <Navbar posts={posts}/>
+                        <Navbar posts={posts} setSelected={setSelected} />
                     </div>
                 </div>
 
                 <div className="right-zone">
                     <div className="body">
-                    
-                        <PostBody posts={posts}/>
-                    
+                        <PostBody posts={posts} selected={selected} />
                     </div>
                 </div>
 
