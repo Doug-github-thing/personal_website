@@ -10,7 +10,7 @@ import "./header.css";
 const Header = ({ setSelected }) => {
     return ( 
         <div className="header-text">
-            <h1 onClick={() => setSelected("0")}>Doug</h1>
+            <h1 onClick={() => setSelected("post0")}>Doug Rynar</h1>
             <p>Computer Engineering Graduate Student | Service Engineer II</p>
         </div>
     );

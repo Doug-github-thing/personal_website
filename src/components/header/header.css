@@ -11,6 +11,7 @@
 .header h1 {
     color: #0ACDFF;
     margin: 0;
+    cursor: pointer;
 }
 
 .header-text {
