@@ -15,14 +15,14 @@ const PostBody = ({ posts, selected }) => {
     <>
         {
             selected === "new" ?
-                <EditPostForm cancelEditingStatus={() => {alert("cancel needs implementation");}} />
+                <EditPostForm />
             :
                 <></>
         }
         {
             posts?.map((this_post, index) => (
                 // If this post is the one that is selected, display it on screen.
-                this_post.postId === selected ? 
+                this_post.id === selected ? 
                     <div key={index}>
                         <Post post={this_post}/>
                     </div>

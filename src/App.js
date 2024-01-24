@@ -6,7 +6,7 @@ import PostBody from "./components/body/PostBody";
 
 // For reactively handling changes to the database, and updating each component.
 import db from "./components/MyFirestore";
-import { collection, getDocs } from "firebase/firestore";
+import { collection, onSnapshot } from "firebase/firestore";
 import React, { useState, useEffect } from "react";
 
 
@@ -15,24 +15,15 @@ function App() {
     // Stores all currently available posts
     const [posts, setPosts] = useState(null);
     // Tracks which page is currently selected to be active in the body
-    const [selected, setSelected] = useState("0");
+    const [selected, setSelected] = useState("post0");
 
 
     // Gets all posts on app load
-    useEffect(()=>{
-        fetchPosts();
-    }, [])
-
-
-    // Get all posts from the datastore
-    const fetchPosts = async () => {
-        await getDocs(collection(db, "posts"))
-            .then((querySnapshot)=>{              
-                const newData = querySnapshot.docs
-                    .map((doc) => ({...doc.data(), id:doc.id }));
-                setPosts(newData);                
-            })
-    }
+    useEffect(() => {
+        onSnapshot(collection(db, "posts"), (snapshot) => {
+            setPosts(snapshot.docs.map((doc)=>({...doc.data(), id: doc.id})))
+        })
+    }, []);
     
 
     // The site is arranged into a header at the top, and a zone-container in the remaining space.
