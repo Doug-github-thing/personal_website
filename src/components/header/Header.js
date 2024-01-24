@@ -11,7 +11,7 @@ const Header = ({ setSelected }) => {
     return ( 
         <div className="header-text">
             <h1 onClick={() => setSelected("0")}>Doug</h1>
-            <p>Service Engineer II | Computer Engineering Graduate Student</p>
+            <p>Computer Engineering Graduate Student | Service Engineer II</p>
         </div>
     );
 }
