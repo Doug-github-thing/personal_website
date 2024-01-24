@@ -11,6 +11,8 @@
 # production
 /build
 
+/public/my_resume.pdf
+
 .firebase
 .github
 
