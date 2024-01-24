@@ -45,18 +45,18 @@ const Post = ({ post }) => {
 
         {/* Display edit form while in "editing" state */}
         {!isEditing ?
-                <>
-                    <p id="content">{post.content}</p>
-                
-                    {/* If there is an attachment0, display it */}
-                    {post.attachment0 == null ? <></> : <>
-                        <img className="attachment" src={post.attachment0} alt="image1" />
-                        <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
-                    </>}
+            <div>
+                <p id="content">{post.content}</p>
+            
+                {/* If there is an attachment0, display it */}
+                {post.attachment0 == null ? <></> : <>
+                    <img className="attachment" src={post.attachment0} alt="image1" />
+                    <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
+                </>}
 
-                    <p id="timestamp">{formatTime(post.timestamp)}</p>
-                </> 
-            :
+                <p id="timestamp">{formatTime(post.timestamp)}</p>
+            </div>
+        :
             <EditPostForm post={post} cancelEditingStatus={() => setIsEditing(false)}/>
         }
                 

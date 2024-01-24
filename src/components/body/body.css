@@ -1,6 +1,9 @@
 .post-body {
     padding: 2%;
     padding-top: 1%;
+    width: 50%;
+    left: 25%;
+    position: relative;
 }
 
 .post-body #title-wrapper {
@@ -17,7 +20,10 @@
 }
 
 .post-body #content {
-    white-space: pre;
+    white-space: pre-wrap;
+    /* width: 50%; */
+    max-width: 100%;
+    overflow: hidden
 }
 
 .post-body .attachment-caption {
