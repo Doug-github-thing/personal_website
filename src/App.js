@@ -24,7 +24,7 @@ function App() {
             setPosts(snapshot.docs.map((doc)=>({...doc.data(), id: doc.id})))
         })
     }, []);
-    
+
 
     // The site is arranged into a header at the top, and a zone-container in the remaining space.
     // The zone-container holds the navbar along the left, and main body content on the right.
@@ -36,17 +36,18 @@ function App() {
 
             <div className="zone-container">
 
+
                 <div className="left-zone">
                     <div className="navbar">
                         <Navbar posts={posts} setSelected={setSelected} />
                     </div>
                 </div>
 
-                <div className="right-zone">
-                    <div className="post-body">
-                        <PostBody posts={posts} selected={selected} />
-                    </div>
+                
+                <div className="post-body">
+                    <PostBody posts={posts} selected={selected} />
                 </div>
+
 
             </div>
         </div>
