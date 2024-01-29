@@ -61,7 +61,7 @@ const Post = ({ post }) => {
                 </>}
 
                 <div id="timestamp-wrapper">
-                    <p id="timestamp">{formatTime(post.timestamp)}</p>
+                    <p id="timestamp">{formatTime(post.timestamp)} </p>
                     <div id="delete-icon" onClick={() => deleteCallback()}><DeleteIcon width="13px" height="13px" /></div>
                 </div>
             </div>
