@@ -16,6 +16,7 @@
 
 .post-body #edit-icon {
     display: inline;
+    cursor: pointer;
 }
 
 .post-body #content {
@@ -32,4 +33,10 @@
 .post-body #timestamp {
     font-style: italic;
     font-size: small;
+    display: inline;
+}
+
+.post-body #delete-icon {
+    display: inline;
+    cursor: pointer;
 }

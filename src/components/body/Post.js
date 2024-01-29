@@ -2,11 +2,12 @@ import EditPostForm from "./EditPostForm";
 
 import { useState } from "react";
 import { ReactComponent as EditIcon } from "../../edit-icon.svg";
+import { ReactComponent as DeleteIcon } from "../../delete-icon.svg";
 
 /**
  * Takes all data from a post object from the firestore database, and displays it.
  * Expects an object of the form:
- * "postId": <string>
+ * "id": <string>
  * "title": <string>
  * "content": <string>
  * "timestamp": <timestamp>
@@ -26,6 +27,11 @@ const Post = ({ post }) => {
         setIsEditing(editingValue);
     }
 
+    // Called when the delete button is clicked on a post.
+    // Creates dialog to confirm deletion.
+    const deleteCallback = () => {
+        alert(`Delete was clicked on post: ${post.id}`);
+    }
 
     // The firestore timestamp is passed as a number of seconds in UTC epoch
     // This converts to a human readable east coast time
@@ -54,7 +60,10 @@ const Post = ({ post }) => {
                     <p className="attachment-caption">Figure 1: {post.attachment0title}</p>
                 </>}
 
-                <p id="timestamp">{formatTime(post.timestamp)}</p>
+                <div id="timestamp-wrapper">
+                    <p id="timestamp">{formatTime(post.timestamp)}</p>
+                    <div id="delete-icon" onClick={() => deleteCallback()}><DeleteIcon width="13px" height="13px" /></div>
+                </div>
             </div>
         :
             <EditPostForm post={post} cancelEditingStatus={() => setIsEditing(false)}/>
