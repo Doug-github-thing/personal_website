@@ -47,13 +47,12 @@ const EditPostForm = ({ post, cancelEditingStatus }) => {
         let newPostId = "";
         await addDoc(postsRef, newPost)
             .then(docRef => {
-                alert(`New post added: ${docRef.id}`);
+                // alert(`New post added!`);
                 newPostId = docRef.id;
             })
             .catch(error => {
                 console.log(error);
             });
-        alert(`Parsed new id: ${newPostId}`);
     }
 
     // Called when submit is called while the form is in Edit mode
