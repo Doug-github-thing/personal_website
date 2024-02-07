@@ -1,5 +1,9 @@
 import EditPostForm from "./EditPostForm";
 
+// Import database in order to perform post deletion.
+import db from "../MyFirestore";
+import { doc, deleteDoc } from "firebase/firestore";
+
 import { useState } from "react";
 import { ReactComponent as EditIcon } from "../../edit-icon.svg";
 import { ReactComponent as DeleteIcon } from "../../delete-icon.svg";
@@ -29,8 +33,12 @@ const Post = ({ post }) => {
 
     // Called when the delete button is clicked on a post.
     // Creates dialog to confirm deletion.
-    const deleteCallback = () => {
-        alert(`Delete was clicked on post: ${post.id}`);
+    const deleteCallback = async () => {
+        const userConfirmed = window.confirm(`Are you sure you want to delete ${post.title}?`);
+        
+        if (userConfirmed) {
+            await deleteDoc(doc(db, "posts", post.id));
+        }
     }
 
     // The firestore timestamp is passed as a number of seconds in UTC epoch
