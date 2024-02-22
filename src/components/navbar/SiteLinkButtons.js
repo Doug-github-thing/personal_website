@@ -12,10 +12,10 @@ const SiteLinkButtons = () => {
 
             {/* Newer format which places the buttons on the side of the navbar as regular links */}
             <div className="button-container">
-                <a className="link" href="https://doug-github-thing.github.io/tictacslide/" target="_blank" rel="noopener noreferrer">TicTacSlide</a>
-                <a className="link" href="https://doug-github-thing.github.io/snake/" target="_blank" rel="noopener noreferrer">Snake</a>
-                <a className="link" href="https://github.com/Doug-github-thing/" target="_blank" rel="noopener noreferrer">My github</a>
                 <a className="link" href="/my_resume.pdf" target="_blank" rel="noopener noreferrer">My Resume</a>
+                <a className="link" href="https://github.com/Doug-github-thing/" target="_blank" rel="noopener noreferrer">My github</a>
+                <a className="link" href="https://doug-github-thing.github.io/tictacslide/" target="_blank" rel="noopener noreferrer">TicTac-Slide!</a>
+                <a className="link" href="https://doug-github-thing.github.io/snake/" target="_blank" rel="noopener noreferrer">Snake</a>
             </div>
         </div>
     );
