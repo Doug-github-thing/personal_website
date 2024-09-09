@@ -8,6 +8,8 @@ import { useState } from "react";
 import { ReactComponent as EditIcon } from "../../edit-icon.svg";
 import { ReactComponent as DeleteIcon } from "../../delete-icon.svg";
 
+import Markdown from "react-markdown";
+
 /**
  * Takes all data from a post object from the firestore database, and displays it.
  * Expects an object of the form:
@@ -60,7 +62,7 @@ const Post = ({ post }) => {
         {/* Display edit form while in "editing" state */}
         {!isEditing ?
             <div>
-                <p id="content">{post.content}</p>
+                <Markdown id="content">{post.content}</Markdown>
             
                 {/* If there is an attachment0, display it */}
                 {post.attachment0 == null ? <></> : <>
