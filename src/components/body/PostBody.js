@@ -7,6 +7,7 @@ import "./body.css";
  * Expected behavior is to display only one post on the screen at a time.
  * 
  * @param {*} posts A list of Post objects with all of their data.
+ * @param {string} selected The string representation of the postId for the post currently selected.
  * @returns A rendering of only the post that shares a "postId" with the currently selected postId.
  */
 const PostBody = ({ posts, selected }) => {
@@ -27,7 +28,7 @@ const PostBody = ({ posts, selected }) => {
                         <Post post={this_post}/>
                     </div>
                 :
-                // blank div when the "selected" post is not the current
+                // blank div when this post element is not "selected"
                 <div key={index}></div>
             ))
         }
