@@ -11,7 +11,9 @@ const Header = ({ setSelected }) => {
     return ( 
         <div className="header-text">
             <h1 onClick={() => setSelected("post0")}>Doug Rynar</h1>
-            <p>Computer Engineering Graduate Student | Service Engineer II</p>
+            <a href={"https://engineering.lehigh.edu/ece"}>Computer Engineering Masters Student - Lehigh University</a>
+            <p></p>
+            <a href={"https://www.pacelabs.com/life-sciences/"}>Equipment Specialist III - Pace Analytical Life Sciences</a>
         </div>
     );
 }
